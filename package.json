@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/Andrewid97/scheduling-visualizer-fileparse.git"
+    "url": "git+ssh://git@github.com:Andr3wid/schedviz-parser-api.git"
   },
   "author": "Andreas Kogler",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/Andrewid97/scheduling-visualizer-fileparse#readme",
+  "homepage": "https://github.com/Andr3wid/schedviz-parser-api",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1"
