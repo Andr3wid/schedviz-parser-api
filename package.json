@@ -1,0 +1,25 @@
+{
+  "name": "scheduling-visualizer-fileparse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/Andrewid97/scheduling-visualizer-fileparse.git"
+  },
+  "author": "Andreas Kogler",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Andrewid97/scheduling-visualizer-fileparse#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.6.9",
+    "nodemon": "^1.19.1"
+  }
+}

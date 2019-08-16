@@ -1,0 +1,27 @@
+--- CSV ---
+{
+    "payload-type": "csv",
+    "mapping-type": "numeric" | "named",
+    "csv-format": "lines" | "file",
+    "has-headers": true | false,
+    "delimiter": ",",
+    "mapping": {
+        "jobname": 0 | "salesorder",
+        "stepname": 1 | "operation",
+        "lane": 2 | "linename",
+        "start": 3 | "start_time",
+        "end": 4 | "end_time"
+    }
+}
+
+--- XML ---
+complicated because structure could vary a lot
+
+--- JSON ---
+same as xml
+
+- CLINGO / ASP (?)
+
+--> API converts file to object and returns that object
+
+
