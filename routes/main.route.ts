@@ -21,7 +21,7 @@ class MainRoute {
             let schedule: CsvRequestModel = req.body;
 
             let parsedCsv = CsvController.parseCsv(schedule);
-            let response: ResponseModel = new ResponseModel(parsedCsv, null, null);
+            let response: ResponseModel = new ResponseModel(parsedCsv, req.body.groupby, req.body.sortby);
 
             res.send(response);
         });

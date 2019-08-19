@@ -4,6 +4,7 @@ import {XmlRequestModel} from '../models/xmlrequest.model';
 import {FieldDetailsModel} from '../models/fielddetails.model';
 import {ScheduleItem} from '../models/schedule-item.model';
 import { start } from 'repl';
+import { SortingService } from './sorting.service';
 
 export class ConversionService {
     /**
@@ -43,6 +44,7 @@ export class ConversionService {
      * @param schedule The schedule to sort.
      */
     static sortSchedule(sortby: string, schedule: ScheduleItem[]): ScheduleItem[] {
+        SortingService.QuickSort(schedule, sortby, 0, schedule.length-1);
         return schedule;
     }
 
