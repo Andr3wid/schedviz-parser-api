@@ -9,9 +9,10 @@ const port  = 3000;
 
 ///////////////////////////// MIDDLEWARE /////////////////////////////
 
-// logging middleware
+// logging middleware & set cors header
 app.use((req, res, next) => {
     console.log(`-> Request from ${req.ip}`);
+    res.header("access-control-allow-origin", "*");
     next();
 });
 
