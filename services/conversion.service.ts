@@ -44,7 +44,7 @@ export class ConversionService {
      * @param schedule The schedule to sort.
      */
     static sortSchedule(sortby: string, schedule: ScheduleItem[]): ScheduleItem[] {
-        SortingService.QuickSort(schedule, sortby, 0, schedule.length-1);
+        SortingService.quickSort(schedule, sortby, 0, schedule.length-1);
         return schedule;
     }
 
