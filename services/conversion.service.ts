@@ -33,8 +33,23 @@ export class ConversionService {
      * @param groupby The keyword to group items by.
      * @param schedule Schedule that has to be grouped.
      */
-    static groupScheduleItems(groupby: string, schedule: ScheduleItem[]): ScheduleItem[] {
-        return schedule;
+    static groupScheduleItems(schedule: ScheduleItem[], groupby: string): any[] {
+        
+        // the grouped array that will be given back
+        let groupedSchedule: any = {};
+
+        for(let i = 0; i < schedule.length; i++) {
+            let val: any = schedule[i][groupby];
+
+            // pre-check if the sub-array already exists
+            if(typeof groupedSchedule[val] === 'undefined') {
+                groupedSchedule[val] = [];
+            }
+
+            groupedSchedule[val].push(schedule[i]);
+        }
+
+        return groupedSchedule;
     }
 
 

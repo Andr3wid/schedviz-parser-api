@@ -26,11 +26,11 @@ export class ResponseModel {
         this.payload = schedule;
 
         if(this.sortedBy !== null && this.sortedBy !== '') {
-            this.payload = ConversionService.sortSchedule(this.sortedBy, this.payload);
+            ConversionService.sortSchedule(this.sortedBy, this.payload);
         }
 
         if(this.groupedBy !== null && this.groupedBy !== '') {
-            this.payload = ConversionService.groupScheduleItems(this.groupedBy, this.payload);
+            this.payload = ConversionService.groupScheduleItems(this.payload, this.groupedBy);
         }
     }
 
