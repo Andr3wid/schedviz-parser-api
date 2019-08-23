@@ -1,6 +1,9 @@
 import {ScheduleItem} from './schedule-item.model';
 import {FieldDetailsModel} from './fielddetails.model';
+import {ColorApiModel, ColorSchemeMode} from '../models/colorapi.model';
+
 import {ConversionService} from '../services/conversion.service';
+import {ColoringService} from '../services/coloring.service';
 
 /**
  * Model used as response format. Every response, from every endpoint looks like this once transformation of the data has finished.
