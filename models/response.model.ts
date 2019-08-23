@@ -28,6 +28,11 @@ export class ResponseModel {
 
         this.payload = schedule;
 
+        // assign a color to each distinct jobname
+        let scheduleColors: ColorApiModel = ColoringService.getColorScheme('009add', this.totalBlocksPlanned, ColorSchemeMode.quad);
+        ColoringService.assignColors(this.payload, scheduleColors);
+        
+
         if(this.sortedBy !== null && this.sortedBy !== '') {
             ConversionService.sortSchedule(this.sortedBy, this.payload);
         }

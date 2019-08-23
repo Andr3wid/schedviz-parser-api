@@ -21,6 +21,7 @@ export class CsvController {
                     start: +line[request.mapping.start],
                     end: +line[request.mapping.end],
                     duration: +line[request.mapping.end] - +line[request.mapping.start],
+                    color: null,
                     prevJob: null
                 };
                 

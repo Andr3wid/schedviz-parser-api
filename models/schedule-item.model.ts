@@ -5,5 +5,6 @@ export class ScheduleItem {
     start: number;
     end: number;
     duration: number;
+    color: string;
     prevJob: ScheduleItem;
 }

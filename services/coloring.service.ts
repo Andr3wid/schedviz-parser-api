@@ -1,5 +1,6 @@
 import {ColorApiModel, ColorSchemeMode} from '../models/colorapi.model';
 import { ScheduleItem } from '../models/schedule-item.model';
+import * as fetch from 'node-fetch';
 
 /**
  * This service uses thecolorapi.com to generate dynamic color-schemes based in a certain color
@@ -8,7 +9,7 @@ import { ScheduleItem } from '../models/schedule-item.model';
 export class ColoringService {
     // example: http://thecolorapi.com/scheme?hex=009add&count=25&format=json&mode=quad
 
-    private static readonly API_BASE_URL = 'http://thecolorapi.com/scheme?';
+    private static readonly API_BASE_URL = 'http://thecolorapi.com/scheme';
 
 
     /**
@@ -18,7 +19,18 @@ export class ColoringService {
      * @param schemeMode Mode in which the color scheme should get generated.
      */
     static getColorScheme(baseColorHex: string, schemeColorCount: number, schemeMode: ColorSchemeMode): ColorApiModel {
-        
+        let requestUrl: string = this.API_BASE_URL + `?hex=${baseColorHex.replace('#','')}&count=${schemeColorCount}&mode=${schemeMode}&format=json`;
+
+        fetch(requestUrl)
+        .then(colorData => {
+            console.log("Received following data from colorapi:");
+            console.log(colorData);
+        })
+        .catch(error => {
+            console.log("Color api call failed. The error message was: ");
+            console.log(error);
+        });
+
         return null;
     }
 
